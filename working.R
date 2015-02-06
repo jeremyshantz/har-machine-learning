@@ -11,7 +11,7 @@ testing <- train[-inTrain,]
 dim(training)
 
 modelFit <- train(classe ~.,data=training, method="glm")
-wmodelFit
+smodelFit
 modelFit$finalModel
 
 predictions <- predict(modelFit,newdata=testing)
@@ -35,8 +35,6 @@ folds[[1]][1:10]
 
 
 # exploratory plotting
-
-
 featurePlot(x=train[, c('gyros_forearm_x', 'magnet_forearm_y', 'var_pitch_forearm')],
             y = train$classe,
             plot='pairs'
