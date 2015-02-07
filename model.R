@@ -1,3 +1,4 @@
+rm(list=ls())
 setwd('~/courses/practical_machine_learning/project/')
 library('caret')
 library('ggplot2')
@@ -11,7 +12,7 @@ testing <- train[-inTrain,]
 dim(training)
 
 modelFit <- train(classe ~.,data=training, method="glm")
-smodelFit
+modelFit
 modelFit$finalModel
 
 predictions <- predict(modelFit,newdata=testing)
@@ -46,9 +47,5 @@ qplot(var_pitch_forearm, classe, data=train)
 # belt, forearm, arm, dumbell  
 grep('belt', names(training), value=TRUE)
 
-
 jeremy <- training[training$user_name=="jeremy", ]
-
-
-
 
