@@ -1,6 +1,4 @@
-```{r}
-suppressPackageStartupMessages(library('knitr')) 
-```
+
 
 ---
 title: "Prediction Assignment: Human Activity Recognition in Weight Lifting Exercises"
