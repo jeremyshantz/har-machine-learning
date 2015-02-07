@@ -1,8 +1,8 @@
 
-Using the [Weight Lifting Exercises Dataset](http://groupware.les.inf.puc-rio.br/har#weight_lifting_exercises), we build a model to predict whether the excersise was executed correctly. 
+Using the [Weight Lifting Exercises Dataset](http://groupware.les.inf.puc-rio.br/har#weight_lifting_exercises), we build a model to predict whether the exercise was executed correctly. 
 
-[View the report](http://www.shantz.io)
-[Class](https://www.coursera.org/course/predmachlearn)
+* [View the report](http://jeremyshantz.github.io/har-machine-learning/predict.html)
+* [Course](https://www.coursera.org/course/predmachlearn)
 
 # Citation
 
