@@ -8,7 +8,7 @@ set.seed(222)
 options(width = 100)
 ```
 ---
-title: "Prediction Assignment: Human Activity Recognition in Weight Lifting Exercises"
+title: "Machine Learning Prediction of Execution Quality in Weight Lifting Exercises"
 author: "Jeremy Shantz"
 date: '2015-02-22'
 output: html_document
@@ -16,7 +16,7 @@ output: html_document
 
 In this study we use machine learning to predict the execution quality of test subjects performing [unilateral dumbbell biceps curl](https://www.youtube.com/results?search_query=Unilateral+Dumbbell+Biceps+Curl) using data [[1]](#Velloso) from sensors worn by the subjects. From the data's 160 variables we select 52 features and apply a random forest algorithm to construct a statistical model. We apply that model to test subset to predict whether each observation corresponds to the correct execution of the exercise or to one of five ways it can be executed incorrectly.
 
-More information about the dat is available: [Weight Lifting Exercises Dataset](http://groupware.les.inf.puc-rio.br/har#weight_lifting_exercises).
+More information about the data is available: [Weight Lifting Exercises Dataset](http://groupware.les.inf.puc-rio.br/har#weight_lifting_exercises).
 
 ## Building the model
 
@@ -92,8 +92,8 @@ mt$overall[1:5]
 The random forest algorithm internally uses a bootstrapped resampling strategy for cross validation. In this case, it made 25 repetitions using the 'boot' method.
 
 ```{r, cache=TRUE, echo=TRUE}
-modelFit$control$method
-modelFit$control$repeats
+model$control$method
+model$control$repeats
 ```
 
 ### Out of Sample Error Rate - From RF's Bootstrap resampling
@@ -101,7 +101,7 @@ modelFit$control$repeats
 The model predicts an out of sample error rate of 0.9%.
 
 ```{r, cache=TRUE, echo=TRUE}
-modelFit$finalModel
+model$finalModel
 ```
  
 ### Out of Sample Error Rate - Applying the Model to the Test Data
