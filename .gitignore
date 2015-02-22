@@ -1,3 +1,5 @@
 *.RData*
 *.Rhistory*
 *shinyapps*
+cache/
+index_cache/
